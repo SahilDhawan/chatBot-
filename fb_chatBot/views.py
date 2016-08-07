@@ -94,7 +94,7 @@ def return_random_quote():
         return quotes_arr[0]
 
 def index(request):
-    print test()
+    print return_random_quote()
     return HttpResponse("Hello World")
 
 def test():
