@@ -61,7 +61,7 @@ def post_facebook_message(fbid, recevied_message):
         joke_text = 'Yo ' + reply_text
 
     random_text = return_random_quote()
-    joke_text = random_text[0]
+    joke_text = quote_search(recevied_message)
                    
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s'%PAGE_ACCESS_TOKEN
     response_msg = json.dumps({"recipient":{"id":fbid}, "message":{"text":joke_text}})
