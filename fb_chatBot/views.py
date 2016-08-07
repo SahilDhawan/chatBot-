@@ -52,7 +52,7 @@ def post_facebook_message(fbid, recevied_message):
     except:
         joke_text = 'Yo ' + reply_text
 
-    random_text = return_random_quote
+    random_text = return_random_quote()
     joke_text = random_text[0]
                    
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s'%PAGE_ACCESS_TOKEN
