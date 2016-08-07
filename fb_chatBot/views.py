@@ -42,7 +42,7 @@ quotes_arr = [["Life isn’t about getting and having, it’s about giving and b
 
 
 def post_facebook_message(fbid, recevied_message):
-    reply_text = recevied_message + '. Anyways let\'s play Pokemon Go ;) .' 
+    reply_text = recevied_message + '. Anyways let\'s play Pokemon Go ;) .' + quotes_arr[0]
 
     try:
         user_details_url = "https://graph.facebook.com/v2.6/%s"%fbid 
