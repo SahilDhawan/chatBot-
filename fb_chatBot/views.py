@@ -14,7 +14,7 @@ from django.utils.decorators import method_decorator
 
 PAGE_ACCESS_TOKEN = 'EAADGi9fqufgBAFSakVmMtTEtyGP9eskxBG8txqG0CXs4TzhZADBZCLbE7haFGGTHL6tPUYRekGxe5BmRPLhZBHhykobHHDZBI2umCaFrmRu64f2ahmeZCR3qTn41cZCbBX7bjlolIz0HVSdBEQdDY7K96xN8EKigZBHkjRWl8E79QZDZD'
 VERIFY_TOKEN = '8447789934m'
-quotes.arr = [["Life isn’t about getting and having, it’s about giving and being.", "Kevin Kruse"],
+quotes_arr = [["Life isn’t about getting and having, it’s about giving and being.", "Kevin Kruse"],
 ["Whatever the mind of man can conceive and believe, it can achieve.", "Napoleon Hill"],
 ["Strive not to be a success, but rather to be of value.", "Albert Einstein"],
 ["Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.", "Robert Frost"],
