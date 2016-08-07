@@ -92,7 +92,8 @@ class MyQuoteBotView(generic.View):
         return HttpResponse()    
 
 def return_random_quote():
-     return random.shuffle(quotes_arr)[0]
+    random.shuffle(quotes_arr)
+    return quotes_arr[0]
 
 
 def index(request):
