@@ -14,6 +14,14 @@ from django.utils.decorators import method_decorator
 
 PAGE_ACCESS_TOKEN = 'EAADGi9fqufgBAFSakVmMtTEtyGP9eskxBG8txqG0CXs4TzhZADBZCLbE7haFGGTHL6tPUYRekGxe5BmRPLhZBHhykobHHDZBI2umCaFrmRu64f2ahmeZCR3qTn41cZCbBX7bjlolIz0HVSdBEQdDY7K96xN8EKigZBHkjRWl8E79QZDZD'
 VERIFY_TOKEN = '8447789934m'
+
+def quote_search(str_var):
+    str_var.lower()
+    for quote_text,quote_author in quotes_arr
+        if str_var in quote_author.lower()
+            return quote_text
+    return return_random_quote()
+
 quotes_arr = [["Life isn’t about getting and having, it’s about giving and being.", "Kevin Kruse"],
 ["Whatever the mind of man can conceive and believe, it can achieve.", "Napoleon Hill"],
 ["Strive not to be a success, but rather to be of value.", "Albert Einstein"],
