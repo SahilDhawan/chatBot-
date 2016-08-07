@@ -23,26 +23,6 @@ def quote_search(str_var):
     return return_random_quote()[0]
 
 
-post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s'%PAGE_ACCESS_TOKEN
-response_msg = json.dumps({"recipient":{"id":fbid}, "message":{"text":joke_text}})
-response_msg2 = json.dumps({"recipient":{"id":fbid}, "message":{"text":response_text}})
-    
-response_msg3 = json.dumps(
-    {"recipient":{"id":fbid}, 
-        "message":{
-            "attachment":{
-                "type":"image",
-                "payload":{
-                    "url":"http://worldversus.com/img/ironman.jpg"
-                }
-            }
-        }
-    })
-    
-status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg)
-status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg3)
-    
-pprint(status.json())
 
 
 quotes_arr = [["Life isn’t about getting and having, it’s about giving and being.", "Kevin Kruse"],
@@ -89,6 +69,26 @@ def post_facebook_message(fbid, recevied_message):
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s'%PAGE_ACCESS_TOKEN
     response_msg = json.dumps({"recipient":{"id":fbid}, "message":{"text":joke_text}})
     status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg)
+    post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s'%PAGE_ACCESS_TOKEN
+    response_msg = json.dumps({"recipient":{"id":fbid}, "message":{"text":joke_text}})
+    response_msg2 = json.dumps({"recipient":{"id":fbid}, "message":{"text":response_text}})
+    
+    response_msg3 = json.dumps(
+        {"recipient":{"id":fbid}, 
+            "message":{
+                "attachment":{
+                    "type":"image",
+                    "payload":{
+                        "url":"http://worldversus.com/img/ironman.jpg"
+                    }
+                }
+            }
+        })
+    
+    status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg)
+    status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg3)
+    
+
     pprint(status.json())
 
 
