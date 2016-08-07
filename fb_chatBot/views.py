@@ -39,10 +39,10 @@ response_msg3 = json.dumps(
         }
     })
     
-    status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg)
-    status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg3)
+status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg)
+status = requests.post(post_message_url, headers={"Content-Type": "application/json"},data=response_msg3)
     
-    pprint(status.json())
+pprint(status.json())
 
 
 quotes_arr = [["Life isn’t about getting and having, it’s about giving and being.", "Kevin Kruse"],
