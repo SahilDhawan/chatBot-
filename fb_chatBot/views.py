@@ -42,7 +42,7 @@ quotes_arr = [["Life isn’t about getting and having, it’s about giving and b
 
 
 def post_facebook_message(fbid, recevied_message):
-    reply_text = recevied_message + '. Anyways let\'s play Pokemon Go ;) .' + str(return_random_quote())
+    reply_text = recevied_message + '. Anyways let\'s play Pokemon Go ;) .' 
 
     try:
         user_details_url = "https://graph.facebook.com/v2.6/%s"%fbid 
@@ -52,7 +52,8 @@ def post_facebook_message(fbid, recevied_message):
     except:
         joke_text = 'Yo ' + reply_text
 
-    
+    random_text = return_random_quote
+    joke_text = random_text[0]
                    
     post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s'%PAGE_ACCESS_TOKEN
     response_msg = json.dumps({"recipient":{"id":fbid}, "message":{"text":joke_text}})
