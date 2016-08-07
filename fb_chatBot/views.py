@@ -13,15 +13,9 @@ from django.utils.decorators import method_decorator
 PAGE_ACCESS_TOKEN = 'EAAYgQ8PcnXcBAMoZC2E1QWAem7VOc7VLvUsTNNHCNx2seOF5CFoMYkodiPk7jgW98ALPIkx8Q8h46joQh93A4EEIs5dmvQXvERRUIMKZCbbna73yGvvusB9tryP5B17TKXXgaajBTDVgZB8r1a4M2qAuaJ9NqkkuHA3ZCHDtZCQZDZD'
 VERIFY_TOKEN = '8447789934m'
 
+
 def post_facebook_message(fbid, recevied_message):
-    # Remove all punctuations, lower case the text and split it based on space
-    #clean_message = re.sub(r"[^a-zA-Z0-9\s]",' ',recevied_message)
-
-    reply_text = ''
-    
-
-    if not reply_text:
-        reply_text = recevied_message
+    reply_text = recevied_message + ':)'
 
     try:
         user_details_url = "https://graph.facebook.com/v2.6/%s"%fbid 
@@ -65,23 +59,17 @@ class MyQuoteBotView(generic.View):
                     pprint(message)    
                     # Assuming the sender only sends text. Non-text messages like stickers, audio, pictures
                     # are sent as attachments and must be handled accordingly. 
-                    try:
-                        post_facebook_message(message['sender']['id'], message['message']['text'])    
-                    except:
-                        print 'Oops'
-                        pass
+                    post_facebook_message(message['sender']['id'], message['message']['text'])    
+                    
 
         return HttpResponse()    
 
 
 
 def index(request):
-    test()
+    print test()
     return HttpResponse("Hello World")
 
 def test():
-    post_facebook_message('abhishek.sukumar.1', 'hello')
+    post_facebook_message('abhishek.sukumar.1','test message')
 
-
-def hello(request):
-    return HttpResponse('By Bye world')
