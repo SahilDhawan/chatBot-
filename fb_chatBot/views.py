@@ -20,7 +20,7 @@ def quote_search(str_var):
     for quote_text,quote_author in quotes_arr:
         if str_var in quote_author.lower():
             return quote_text
-    return return_random_quote()
+    return return_random_quote()[0]
 
 quotes_arr = [["Life isn’t about getting and having, it’s about giving and being.", "Kevin Kruse"],
 ["Whatever the mind of man can conceive and believe, it can achieve.", "Napoleon Hill"],
@@ -106,9 +106,11 @@ def return_random_quote():
 
 
 def index(request):
+    print test()
     print return_random_quote()
     return HttpResponse("Hello World")
 
 def test():
-    post_facebook_message('sahil.dhawan.98','test message')
+    #post_facebook_message('sahil.dhawan.98','test message')
+    return HttpResponse(return_random_quote())
 
