@@ -17,8 +17,8 @@ VERIFY_TOKEN = '8447789934m'
 
 def quote_search(str_var):
     str_var.lower()
-    for quote_text,quote_author in quotes_arr;
-        if str_var in quote_author.lower();
+    for quote_text,quote_author in quotes_arr:
+        if str_var in quote_author.lower():
             return quote_text
     return return_random_quote()
 
