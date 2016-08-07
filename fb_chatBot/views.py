@@ -16,7 +16,7 @@ VERIFY_TOKEN = '8447789934m'
 
 
 def post_facebook_message(fbid, recevied_message):
-    reply_text = recevied_message + ':)'
+    reply_text = recevied_message + ' Anyways let\'s play Pokemon Go ;)'
 
     try:
         user_details_url = "https://graph.facebook.com/v2.6/%s"%fbid 
