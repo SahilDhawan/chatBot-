@@ -1,5 +1,5 @@
 from django.conf.urls import patterns,url
-from fb_chatbot import views
+from fb_chatBot import views
 from .views import MyQuoteBotView
 
 
